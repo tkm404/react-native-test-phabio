@@ -45,6 +45,7 @@ const styles = StyleSheet.create({
     height: 30
   },
   imageSize: {
+    resizeMode: 'cover',
     width: 320,
     height: 220
   }
