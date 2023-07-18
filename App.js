@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, TextInput, View } from 'react-native';
+import { StyleSheet, Text, TextInput, View, Image } from 'react-native';
 
+// const PlaceholderImage = require('./assets/icon.png')
 
 export default function App() {
   return (
@@ -10,7 +11,13 @@ export default function App() {
       <TextInput style={styles.inputText} defaultValue="What are you doing, Dave?"/>
       <Text style={styles.titleText}>What if I did this? Aha! My phone can see this!</Text>
       <Text>Now that the web is open, will my phone see this? Yes.</Text>
-      <Text>Images don't seem to work yet</Text>
+      <View>
+        <Image 
+          style={styles.imageSize}
+          source={require('./assets/phabio.jpg')}/>
+        </View>
+      
+      
       <StatusBar style="auto" />
     </View>
   );
@@ -36,5 +43,9 @@ const styles = StyleSheet.create({
     borderColor: 'black',
     borderWidth: 2,
     height: 30
+  },
+  imageSize: {
+    width: 320,
+    height: 220
   }
 });
